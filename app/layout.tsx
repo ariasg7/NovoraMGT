@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   
   // OpenGraph (Social Media SEO)
   openGraph: {
-    title: 'Novora | Elite Branding & Creative Studio Miami',
+    title: 'Novora Management',
     description: 'Crafting digital legacies through high-impact branding and elite creative execution in Miami, FL.',
     url: 'https://www.novoramgt.com',
     siteName: 'Novora Management',
