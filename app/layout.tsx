@@ -1,27 +1,59 @@
 import type { Metadata } from 'next';
-import './globals.css'; // Make sure your styles are imported
+import './globals.css';
+import { LoadingScreen } from '../components/loading-screen';
+import { GlowingCursor } from '../components/glowing-cursor';
 
-// 1. This handles the link previews (OG tags)
 export const metadata: Metadata = {
-  title: 'Novora Management',
-  description: 'Crafting digital legacies through high-impact branding and elite creative execution.',
+  // Replace with your real domain tomorrow
+  metadataBase: new URL('https://www.novoramgt.com'), 
+  title: {
+    default: 'Novora Management',
+    template: '%s | Novora Management'
+  },
+  description: 'Miami’s premier creative studio crafting digital legacies through high-impact branding, production, and elite creative execution.',
+  keywords: [
+    'Creative Studio Miami', 
+    'Branding Agency Miami', 
+    'Content Production Miami', 
+    'Digital Marketing Miami', 
+    'Novora Management', 
+    'Artist Management Miami'
+  ],
+  authors: [{ name: 'Giani Arias' }],
+  creator: 'Giani Arias',
+  
+  // OpenGraph (Social Media SEO)
   openGraph: {
-    title: 'Novora',
-    description: 'Crafting digital legacies through high-impact branding.',
-    url: 'https://yourdomain.com',
-    siteName: 'Novora',
+    title: 'Novora | Elite Branding & Creative Studio Miami',
+    description: 'Crafting digital legacies through high-impact branding and elite creative execution in Miami, FL.',
+    url: 'https://www.novoramgt.com',
+    siteName: 'Novora Management',
     images: [
       {
-        url: 'https://yourdomain.com/img/og-image.png', 
+        url: 'https://raw.githubusercontent.com/ariasg7/NovoraMGT/refs/heads/main/public/img/Novora_bg.jpeg', 
         width: 1200,
         height: 630,
+        alt: 'Novora Management Miami'
       },
     ],
+    locale: 'en_US',
     type: 'website',
+  },
+
+  // Robots (Tells Google to index the site)
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
-// 2. This IS the React Component that Next.js is looking for
 export default function RootLayout({
   children,
 }: {
@@ -29,8 +61,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className="bg-black text-white">
+        {/* These components handle the global effects */}
+        <LoadingScreen />
+        <GlowingCursor />
+        
+        {/* This renders your actual page content */}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
