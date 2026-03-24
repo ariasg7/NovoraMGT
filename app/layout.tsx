@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   // Replace with your real domain tomorrow
   metadataBase: new URL('https://www.novoramgt.com'), 
   title: {
-    default: 'Novora Management | Elite Creator & Influencer Agency',
+    default: 'Novora Management',
     template: '%s | Novora Management'
   },
   description: 'Boutique influencer and social media management for the next generation of female creators. Based in Miami & Los Angeles, we scale your presence and secure elite brand partnerships.',
