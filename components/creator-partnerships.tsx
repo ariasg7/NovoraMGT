@@ -44,7 +44,7 @@ const creators: Creator[] = [
   {
     name: "Braeden Carter",
     niche: "Streamer",
-    followers: "396K",
+    followers: "494K",
     handle: "@braedencarterrr",
     instagram: "https://www.instagram.com/braedencarterrr",
     image: "/img/Creators/braedencarterrr.webp",

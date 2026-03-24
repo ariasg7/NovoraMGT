@@ -13,10 +13,10 @@ export default function App() {
     <div className="w-full bg-[#000000] min-h-screen">
       <Navigation />
       < HeroSection/>
+      <ServicesSection/>
       < PortfolioGrid/>
       < BrandPartnerships/>
       < CreatorPartnerships/>
-      <ServicesSection/>
       < ProcessSection />
       < FinalCTA />
       < Footer />

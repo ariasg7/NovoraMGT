@@ -7,25 +7,28 @@ export const metadata: Metadata = {
   // Replace with your real domain tomorrow
   metadataBase: new URL('https://www.novoramgt.com'), 
   title: {
-    default: 'Novora Management',
+    default: 'Novora Management | Elite Creator & Influencer Agency',
     template: '%s | Novora Management'
   },
-  description: 'Miami’s premier creative studio crafting digital legacies through high-impact branding, production, and elite creative execution.',
+  description: 'Boutique influencer and social media management for the next generation of female creators. Based in Miami & Los Angeles, we scale your presence and secure elite brand partnerships.',
   keywords: [
-    'Creative Studio Miami', 
-    'Branding Agency Miami', 
-    'Content Production Miami', 
-    'Digital Marketing Miami', 
-    'Novora Management', 
-    'Artist Management Miami'
+    'Influencer Management Miami',
+    'Creator Agency Los Angeles',
+    'Social Media Management for Women',
+    'How to scale social media 2026',
+    'Boutique Influencer Agency',
+    'Novora Management',
+    'Brand Deal Negotiation for Creators',
+    'Miami Creator Studio',
+    'LA Talent Management'
   ],
   authors: [{ name: 'Giani Arias' }],
   creator: 'Giani Arias',
   
-  // OpenGraph (Social Media SEO)
+  // OpenGraph (Social Media SEO - How it looks when shared on IG/Twitter/iMessage)
   openGraph: {
-    title: 'Novora Management',
-    description: 'Crafting digital legacies through high-impact branding and elite creative execution in Miami, FL.',
+    title: 'Novora Management | Scaling Elite Creators',
+    description: 'Boutique management for the digital elite. We scale 18-30 year old creators through strategic branding and high-impact partnerships in Miami & LA.',
     url: 'https://www.novoramgt.com',
     siteName: 'Novora Management',
     images: [
@@ -33,14 +36,14 @@ export const metadata: Metadata = {
         url: 'https://raw.githubusercontent.com/ariasg7/NovoraMGT/refs/heads/main/public/img/Novora_bg.jpeg', 
         width: 1200,
         height: 630,
-        alt: 'Novora Management Miami'
+        alt: 'Novora Management - Creator Growth & Branding'
       },
     ],
     locale: 'en_US',
     type: 'website',
   },
 
-  // Robots (Tells Google to index the site)
+  // Robots (Ensures Google indexes your site properly)
   robots: {
     index: true,
     follow: true,
@@ -52,6 +55,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+
+  // Extra: Verification for Google Search Console (Recommended for tomorrow)
+  // verification: {
+  //   google: 'your-google-verification-code',
+  // },
 };
 
 export default function RootLayout({
@@ -61,7 +69,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className="bg-black text-white antialiased">
         {/* These components handle the global effects */}
         <LoadingScreen />
         <GlowingCursor />

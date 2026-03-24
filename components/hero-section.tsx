@@ -89,12 +89,13 @@ export function HeroSection() {
           <a href = "https://cal.com/novora/30min" target ="_blank"><button className="px-8 py-4 bg-white text-black rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 text-lg font-medium">
             Book Now
           </button> </a>
+          {/*
           <button
             onClick={() => scrollToSection('work')}
             className="px-8 py-4 border border-white/30 text-white rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-lg"
           >
             Explore Our Work
-          </button>
+          </button> */}
         </div>
       </div>
 
