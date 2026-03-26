@@ -11,7 +11,6 @@ interface Creator {
   handle: string;
   instagram: string;
   image: string;
-  results: string[];
 }
 
 const creators: Creator[] = [
@@ -21,12 +20,7 @@ const creators: Creator[] = [
     followers: "23.3M",
     handle: "@6ix9ine",
     instagram: "https://www.instagram.com/6ix9ine",
-    image: "/img/Creators/6ix9nine.webp",
-    results: [
-      "Global brand positioning strategy",
-      "Digital presence optimization",
-      "Strategic content creative direction"
-    ]
+    image: "/img/Creators/6ix9nine.webp"
   },
   {
     name: "Lily Phillips",
@@ -34,12 +28,7 @@ const creators: Creator[] = [
     followers: "1.5M",
     handle: "@lilyphillip_s",
     instagram: "https://www.instagram.com/lilyphillip_s",
-    image: "/img/Creators/lilyphillip_s.webp",
-    results: [
-      "Secured premium brand endorsements",
-      "2.5x engagement rate increase",
-      "Professional brand management"
-    ]
+    image: "/img/Creators/lilyphillip_s.webp"
   },
   {
     name: "Braeden Carter",
@@ -47,12 +36,7 @@ const creators: Creator[] = [
     followers: "494K",
     handle: "@braedencarterrr",
     instagram: "https://www.instagram.com/braedencarterrr",
-    image: "/img/Creators/braedencarterrr.webp",
-    results: [
-      "Stream overlay & brand identity design",
-      "Cross-platform growth strategy",
-      "Merchandise line conceptualization"
-    ]
+    image: "/img/Creators/braedencarterrr.webp"
   },
   {
     name: "Michael Beasley",
@@ -60,12 +44,7 @@ const creators: Creator[] = [
     followers: "641K",
     handle: "@michael8easley",
     instagram: "https://www.instagram.com/michael8easley",
-    image: "/img/Creators/michael8easley.webp",
-    results: [
-      "Professional athlete brand management",
-      "Commercial partnership outreach",
-      "Legacy positioning & media strategy"
-    ]
+    image: "/img/Creators/michael8easley.webp"
   }
 ];
 
@@ -148,7 +127,7 @@ export default function CreatorPartnerships() {
             }`}>
               <h4 className="text-sm uppercase tracking-[0.2em] text-white/40 mb-6 font-mono">Strategic Impact</h4>
               <h3 className="text-3xl md:text-4xl text-white mb-8">Partnership Results</h3>
-              
+              {/* 
               <div className="space-y-6 mb-12">
                 {creator.results.map((result, index) => (
                   <div key={index} className="group flex items-start gap-4">
@@ -158,7 +137,7 @@ export default function CreatorPartnerships() {
                     <p className="text-xl text-white/70 pt-1 group-hover:text-white transition-colors">{result}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <a href = "https://cal.com/novora/30min" target = "_blank" ><button className="w-full sm:w-auto px-10 py-4 bg-white text-black rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-300 font-bold">
                 Scale Your Brand
