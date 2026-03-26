@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-// 2. Correct way to handle your local logo
 const logo = '/img/novora.png'; 
-// 3. Correct way to handle your background image
 const bgImage = '/img/hero_background.jpeg'; 
 
 export function HeroSection() {
@@ -15,13 +13,6 @@ export function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image Wrapper */}
@@ -31,7 +22,6 @@ export function HeroSection() {
             isLoaded ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          {/* 4. Use standard img tag for simplicity with your local path */}
           <img
             src={bgImage}
             alt="Abstract dark background"
@@ -48,23 +38,24 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-8 text-center">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 text-center">
         {/* Large Logo Display */}
         <div
-          className={`mb-12 flex justify-center transition-all duration-1000 delay-200 ${
+          className={`mb-8 md:mb-12 flex justify-center transition-all duration-1000 delay-200 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
+          {/* Mobile height increased to 240px; Desktop remains 400px */}
           <img 
             src={logo} 
             alt="Novora" 
-            className="w-auto h-[120px] md:h-[400px] object-contain"
+            className="w-auto h-[240px] md:h-[400px] object-contain"
           />
         </div>
 
         {/* Headline */}
         <h1
-          className={`text-[48px] md:text-[72px] font-bold text-white leading-tight mb-6 transition-all duration-1000 delay-400 ${
+          className={`text-4xl md:text-[72px] font-bold text-white leading-[1.1] md:leading-tight mb-6 transition-all duration-1000 delay-400 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -73,7 +64,7 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p
-          className={`text-xl md:text-2xl text-white/70 mb-12 max-w-[700px] mx-auto transition-all duration-1000 delay-600 ${
+          className={`text-lg md:text-2xl text-white/70 mb-12 max-w-[700px] mx-auto transition-all duration-1000 delay-600 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -86,16 +77,11 @@ export function HeroSection() {
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <a href = "https://cal.com/novora/30min" target ="_blank"><button className="px-8 py-4 bg-white text-black rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 text-lg font-medium">
-            Book Now
-          </button> </a>
-          {/*
-          <button
-            onClick={() => scrollToSection('work')}
-            className="px-8 py-4 border border-white/30 text-white rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-lg"
-          >
-            Explore Our Work
-          </button> */}
+          <a href="https://cal.com/novora/30min" target="_blank">
+            <button className="w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 text-lg font-medium">
+              Book Now
+            </button> 
+          </a>
         </div>
       </div>
 

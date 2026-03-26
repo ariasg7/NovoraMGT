@@ -38,7 +38,7 @@ const creators: Creator[] = [
     results: [
       "Secured premium brand endorsements",
       "2.5x engagement rate increase",
-      "Cohesive aesthetic overhaul"
+      "Professional brand management"
     ]
   },
   {
